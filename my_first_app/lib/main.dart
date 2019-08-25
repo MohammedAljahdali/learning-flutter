@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './question.dart';
+import './answer.dart';
 
 void main() => runApp(MyFirstApp());
 
@@ -18,7 +19,7 @@ class _MyFirstAppState extends State<MyFirstApp> {
     'what\' is your favorite day?',
   ];
   var _questionIndex = 0;
-  void answerQuestion() {
+  void _answerQuestion() {
     setState(() {
       _questionIndex++;
       if (_questionIndex == _questions.length) _questionIndex = 0;
@@ -38,18 +39,9 @@ class _MyFirstAppState extends State<MyFirstApp> {
             Question(
               questionText: _questions[_questionIndex],
             ),
-            RaisedButton(
-              child: Text('Answer1'),
-              onPressed: answerQuestion,
-            ),
-            RaisedButton(
-              child: Text('Answer2'),
-              onPressed: answerQuestion,
-            ),
-            RaisedButton(
-              child: Text('Answer3'),
-              onPressed: answerQuestion,
-            ),
+            Answer(_answerQuestion),
+            Answer(_answerQuestion),
+            Answer(_answerQuestion),
           ],
         ),
       ),
