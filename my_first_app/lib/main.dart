@@ -41,7 +41,7 @@ class _MyFirstAppState extends State<MyFirstApp> {
         {'text': 'thursday', 'score': 7}
       ],
     },
-  ];
+  ];    
   var _questionIndex = 0;
   var _totalScore = 0;
   void _answerQuestion(int score) {
